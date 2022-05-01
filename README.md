@@ -70,6 +70,8 @@ jupyter notebook
    </tr>
 </table>
 
+就上表的數據來看，可以發現以較少(1個)的 mixture 來建構 GMM 的效能會比以多個 mixture 來建構 GMM 的效能好。
+
 ## 訓練結果
 #### Scenario 1
 以 soccer1.jpg 中的場地 pixel 建構 GMM，稱此模型為 M1，並以 soccer1.jpg 做測試
@@ -94,4 +96,4 @@ jupyter notebook
 使用兩張圖片建構 GMM model，分別將兩張照片進行測試，模型可能是因為經過兩張圖片的訓練有點 overfitting，兩個測試結果表現較差: 
 Scenario 3-1 或許是 soccer1.jpg 圖片的內容較為單純(大部分是場地，其餘的內容佔比較小，且為單純的色塊為主)，因此判斷的準確度沒有下滑太多，對於場地上的線的判斷有提升；場上的人物判斷效果則變差，而場外牆板後方的區域也是大部分判斷錯誤。
 
-Scenario 3-2 可以觀察到不僅觀眾區的判斷大量錯誤，連場地靠近觀眾區的區塊也判斷錯誤。經過觀察可以發現，與 soccer1.jpg 不同的是 soccer2.jpg 的觀眾區顏色較為繽紛，而且場地內還有陰影的變化(有照到陽光與沒照到陽光)，因此可以斷定影響 Model2 準確度的訓練資料是 soccer2.jpg，另外也可以得知若要使用顏色較多的圖片來進行 Gaussian Mixture Model 的訓練，其結果較差。
+Scenario 3-2 可以觀察到不僅觀眾區的判斷大量錯誤，連場地靠近觀眾區的區塊也判斷錯誤。經過觀察可以發現，與 soccer1.jpg 不同的是 soccer2.jpg 的觀眾區顏色**較為繽紛**，而且場地內還有陰影的變化(有照到陽光與沒照到陽光)，因此可以斷定影響 Model2 準確度的訓練資料是 soccer2.jpg。另外也可以得知若要**使用顏色較多的圖片來進行 Gaussian Mixture Model 的訓練，其結果較差**。

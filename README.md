@@ -68,18 +68,22 @@ jupyter notebook
 ## 訓練結果
 #### Scenario 1
 以 soccer1.jpg 中的場地 pixel 建構 GMM，稱此模型為 M1，並以 soccer1.jpg 做測試
+
 ![Segmentation1](https://raw.githubusercontent.com/eggtower/Gaussian-mixture-models/master/result/Segmentation1.jpg)
 
 可以觀察到以一張圖片建構 GMM model,以相同的圖片進行測試，判別是否為場地的效果不錯，人物與場地能區隔出來。與 mask 做比較，僅有場地上的線無法區分出來以及場外後方的景物有些許的錯誤判別。
 #### Scenario 2
 以M1針對soccer2.jpg做測試
+
 ![Segmentation2](https://raw.githubusercontent.com/eggtower/Gaussian-mixture-models/master/result/Segmentation2.jpg)
 
 使用一張圖片建構 GMM model,以不同的圖片進行測試，人物與場地上的線，相較於 Scenario 1 能辨別的更清楚，但是在場外後方的觀眾區辨別的結果就比較差了，可觀察到有不少看板或是觀眾群被錯誤判斷呈白色區塊。
+
 #### Scenario 3-1
 ![Segmentation3-1](https://raw.githubusercontent.com/eggtower/Gaussian-mixture-models/master/result/Segmentation3-1.jpg)
 #### Scenario 3-2
 ![Segmentation3-2](https://raw.githubusercontent.com/eggtower/Gaussian-mixture-models/master/result/Segmentation3-2.jpg)
+
 以 soccer1.jpg 以及 soccer2.jpg 中的場地 pixel 建構 GMM，稱此模型為 M2，並以 soccer1.jpg 以及 soccer2.jpg 做測試 
 
 使用兩張圖片建構 GMM model，分別將兩張照片進行測試，模型可能是因為經過兩張圖片的訓練有點 overfitting，兩個測試結果表現較差: 

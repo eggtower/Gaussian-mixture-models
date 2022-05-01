@@ -1,4 +1,9 @@
 # Gaussian-mixture-models README
+使用 `sklearn.mixture` 的 `GaussianMixture`
+
+> The method fits the model n_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for max_iter times until the change of likelihood or lower bound is less than tol, otherwise, a ConvergenceWarning is raised. If warm_start is True, then n_init is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
+
+[sklearn.mixture.GaussianMixture - scikit-learn 1.0.2 documentation](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture.fit)
 
 ## 訓練資料
 #### 兩張足球轉播畫面
